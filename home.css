@@ -2,7 +2,7 @@
 .hero-content {
   max-width: 600px;
   position: absolute;
-  top: 427px;
+  top: 435px;
   left: 15px;
       animation: fedUp 2.5s ease-in-out forwards;
 }
