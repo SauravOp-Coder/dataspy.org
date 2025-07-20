@@ -803,49 +803,9 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
     </script>
 
  <!-- Floating WhatsApp Box -->
-  <div id="waBoxWrapper" class="fixed bottom-6 right-6 z-50 flex items-center transition-all duration-500 ease-in-out">
-    <!-- Main Box -->
-    <div id="waBox" class="max-w-xs w-80 p-4 rounded-xl bg-[#0b0f1a] text-white shadow-lg border border-red-500 transition-transform duration-500 ease-in-out transform translate-x-0">
-      <div class="flex items-start gap-4">
-        <div class="p-2 bg-red-600 rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="whatsapp" class="w-6 h-6"/>
-        </div>
-        <div class="flex-1">
-          <h3 class="text-lg font-semibold">Connect on WhatsApp </h3>
-          <p class="text-sm text-gray-300">For Services Info and Live Programs query's</p>
-          <a href="https://wa.me/918805981687" target="_blank" class="inline-block mt-3 text-red-400 hover:underline">Ask Now →</a>
-        </div>
-      </div>
-    </div>
 
-    <!-- Arrow Toggle Button -->
-    <button id="waToggleBtn" onclick="toggleWaBox()" class="bg-red-500 text-white rounded-r-xl h-full px-2 flex items-center justify-center shadow-md transition-all duration-300">
-      <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-  </div>
 
   <!-- Toggle Script -->
-  <script>
-    let isHidden = false;
-
-    function toggleWaBox() {
-      const box = document.getElementById('waBox');
-      const arrow = document.getElementById('arrowIcon');
-      
-
-      if (isHidden) {
-        box.classList.remove('translate-x-full');
-        arrow.classList.remove('rotate-360');
-      } else {
-        box.classList.add('translate-x-full');
-        arrow.classList.add('rotate-180');
-      }
-
-      isHidden = !isHidden;
-    }
-  </script>
 
     <script>
   function toggleMenu() {
