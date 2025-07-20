@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataspy - Technology Solutions & Business Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+        :root {
+            --primary: #000000;
+            --secondary: #ef4444;
+            --dark: #111827;
+            --light: #f3f4f6;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), 
+                        url('final.png') center/cover no-repeat;
+                        background-size: cover;
+                        height: 100vh;
+        }
+        .gradient-bg1 {
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)), 
+                        url('Screenshot\ 2025-07-18\ 124939.png') center/cover no-repeat;
+                        background-size: cover;
+                       
+        }
+         .gradient-bg2 {
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)), 
+                        url('abstract-red-black-metallic-arrow-speed-direction-geometric-design-modern-technology-futuristic-background-free-vector.jpg') center/cover no-repeat;
+                        background-size: cover;
+                     
+        }
+         .gradient-bg3 {
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), 
+                        url('Screenshot\ 2025-07-18\ 124847.png') center/cover no-repeat;
+                        background-size: cover;
+         }
+          .gradient-bg4 {
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,1)), 
+                        url('fixlap2.png') center/cover no-repeat;
+                        background-size: cover;
+         }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        
+    
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+
+#dd{
+    position: relative;
+    top: 130px;
+}
+#ham {
+    position: absolute;
+    right: 55px;
+    align-items: center;
+}
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+   <!-- Navbar -->
+  <header class="navbar">
+  <div class="logo" id="Home">
+    <img src="ei_1752053280162-removebg-preview (2).png" alt="Logo">
+  </div>
+
+  <!-- Hamburger icon -->
+  <div id="ham" class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="right-links">
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#portfolio">Our Work</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-18 gradient-bg text-white px-4 lg:px-6">
+        <div id="dd" class="container mx-auto flex flex-col lg:flex-col items-center">
+           <center>
+            <div class="lg:w-100% mb-12 lg:mb-0 fade-in ">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6  leading-tight text-white animate___animated animate_bounce animate_infinite">Spy Into The World Of <span class="text-red-500">Business</span> With
+                    <span class="text-red-500 animate___animated animate_bounce animate_infinite">Artificial Intelligence</span>
+                </h1>
+            </div>
+            </center>
+
+            
+        </div>
+       <div   class="hero-content">
+      <h1>Welcome To DataSpy.</h1>
+      <p>
+       At Dataspy Technologies Pvt. Ltd., our mission is to empower businesses through innovative and future-ready digital solutions. We combine the strengths of technology, creativity, and data-driven strategy to help organizations grow, improve visibility.
+      </p>
+      <a href="#about" class="cta-button">More About Us →</a>
+    </div>
+    </section>
+
+    <!-- Services Section -->
+     <section id="services" class="py-20 px-6 gradient-bg2 lg:px-12 bg-black">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Our <span class="text-red-600">Services</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive digital solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                       <a href="web_dev_service.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-blue-100">
+                          <div class="service-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                    <p class="text-gray-200 mb-4"> At DataSpy, we don’t just build websites — we create AI-powered digital ecosystems designed to elevate your brand, drive innovation, and accelerate business transformation.
+</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">HTML </span>
+                        <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">CSS</span>
+                        <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">JS</span>
+                    </div>
+                       </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                     <a href="data_Analysis.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-green-100">
+                           <div class="service-icon bg-green-100 text-green-600">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Analytics</h3>
+                    <p class="text-gray-200 mb-4">Our end-to-end data services help businesses make smarter, faster, and more informed decisions using AI-driven intelligence, automation, and real-time insights.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">Power BI</span>
+                        <span class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">SQL</span>
+                    </div>
+                     </a>
+                 
+                </div>
+                
+                <!-- Service 3 -->
+  <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                     <a href="Artificial_intelligence.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-red-500">
+                          <div class="service-icon bg-red-100 text-red-600">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Artificial Intelligence</h3>
+                    <p class="text-gray-200 mb-4">At DataSpy, we harness the power of AI to transform how businesses operate. Our services go beyond automation — we build intelligent systems that think, adapt, and deliver value across operations.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full">Chatbots</span>
+                        <span class="bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full">NLP</span>
+                        <span class="bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full">Advanced AI</span>
+                    </div>
+                     </a>
+                  
+                </div>
+                
+
+
+
+        
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                     <a href="Business_analysis.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-orange-100">
+                          <div class="service-icon bg-orange-100 text-orange-600">
+                        <i class="fas fa-chess-knight text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Development</h3>
+                    <p class="text-gray-200 mb-4">empowering Startups & Enterprises with Strategic Growth Solutions
+we help you scale it with a data-driven, AI-empowered approach. From digital presence to market expansion, we offer end-to-end solutions tailored for measurable growth.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full">Strategy</span>
+                        <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full">Consulting</span>
+                        <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full">Growth</span>
+                    </div>
+                     </a>
+                  
+                </div>
+                
+                <!-- Service 5 -->
+                      <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                      <a href="digital_marketing.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-purple-100">
+                             <div class="service-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-bullseye text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-200 mb-4">Accelerate Your Brand's Reach with AI-Powered Digital Strategies
+At DataSpy, we blend creativity, strategy, and artificial intelligence to craft result-oriented digital marketing campaigns that drive traffic, engagement, and ROI.
+</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full">SEO</span>
+                        <span class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full">PPC</span>
+                        <span class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full">SMM</span>
+                    </div>
+                      </a>
+               
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800">
+                    <a href="Graphic_design.html" class="block bg-gray-900 rounded-xl p-8 transition-all duration-300 card-hover border border-gray-800 hover:ring-2 hover:ring-indigo-100">
+                         <div class="service-icon bg-indigo-100 text-indigo-600">
+                        <i class="fas fa-cloud text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Graphic Design</h3>
+                    <p class="text-gray-200 mb-4">Bring Your Brand to Life with AI-Powered Creativity
+At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, impactful, and consistent visual designs tailored for business growth and brand identity.
+
+</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">AWS</span>
+                        <span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">Azure</span>
+                        <span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">GCP</span>
+                    </div>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 gradient-bg3 lg:px-12 bg-black">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6658547-08a9-4bcd-b862-d13084ac3bf8.png" alt="Team of diverse professionals collaborating in a modern office space" class="rounded-xl shadow-lg">
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">About <span class="text-red-600">Dataspy</span></h2>
+                    <p class="text-gray-100 mb-6">Founded in 2023, Dataspy is a leading technology solutions provider specializing in digital transformation for businesses of all sizes.</p>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4 rounded-full bg-blue-100 p-3">
+                                <i class="fas fa-lightbulb text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Our Mission</h4>
+                                <p class="text-gray-100">To deliver AI-powered business solutions in digital marketing, web development, and business strategy by combining advanced analytics, automation, and creative design — helping our clients transform data into action and ideas into impactful outcomes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4 rounded-full bg-green-100 p-3">
+                                <i class="fas fa-eye text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Our Vision</h4>
+                                <p class="text-gray-100">To empower businesses of all sizes with intelligent, Artificial Intelligence-driven solutions that deliver measurable impact, accelerate growth, and spark meaningful digital transformation. We envision a future where smart technologies seamlessly enhance decision-making, automate operations, and unlock new possibilities for every enterprise — from startups to global organizations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="mr-4 rounded-full bg-purple-100 p-3">
+                                <i class="fas fa-bolt text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Our Approach</h4>
+                                <p class="text-gray-100">At DataSpy, we integrate Artificial Intelligence at the core of every service—from digital marketing to business development and analytics. We start by understanding your unique business challenges, then design AI-driven solutions using machine learning, automation, and real-time analytics. Finally, we deploy and scale these solutions to deliver measurable growth, smarter decisions, and lasting impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="#contact" class="bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition">Get in Touch</a>
+                        <a href="#portfolio" class="ml-4 text-red-600 font-medium hover:underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+  <section id="programs" class="py-20 px-6 lg:px-12 gradient-bg4">
+    <div class="container mx-auto">
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
+          Our <span class="text-red-600">Training Programs</span>
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+          Not Just Services, We Build Skills That Serve. Our comprehensive learning and development programs drive business growth and technical excellence.
+        </p>
+        <h3 class="mt-6 text-xl italic text-red-400 font-bold">Spy into the world of data with <br> “Industry-Integrated Training”</h3>
+      </div>
+
+      <!-- Program Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- Card Template -->
+        <div class="bg-gray-900 rounded-2xl p-8 shadow-xl border border-red-800 hover:shadow-red-600/30 transition-all duration-300 group">
+          <div class="flex items-center justify-center w-14 h-14 bg-red-500/10 text-red-500 rounded-full mb-5 border border-red-500 transition-all group-hover:rotate-12">
+            <i class="fas fa-graduation-cap text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-white">Courses we Offer</h3>
+          <p class="text-gray-400 mb-4">Hands-on technical training in web development, data science, digital marketing, and more.</p>
+          <a href="acadamic_conciltancypro.html" class="text-red-500 font-semibold hover:underline hover:text-red-400 transition">Explore Courses →</a>
+        </div>
+
+        <div class="bg-gray-900 rounded-2xl p-8 shadow-xl border border-red-800 hover:shadow-red-600/30 transition-all duration-300 group">
+          <div class="flex items-center justify-center w-14 h-14 bg-red-500/10 text-red-500 rounded-full mb-5 border border-red-500 transition-all group-hover:rotate-12">
+            <i class="fas fa-user-graduate text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-white">Academic Consultancy</h3>
+          <p class="text-gray-400 mb-4">Expert guidance for institutions on curriculum development and tech integration.</p>
+          <a href="all_projects.html" class="text-red-500 font-semibold hover:underline hover:text-red-400 transition">Learn More →</a>
+        </div>
+
+        <div class="bg-gray-900 rounded-2xl p-8 shadow-xl border border-red-800 hover:shadow-red-600/30 transition-all duration-300 group">
+          <div class="flex items-center justify-center w-14 h-14 bg-red-500/10 text-red-500 rounded-full mb-5 border border-red-500 transition-all group-hover:rotate-12">
+            <i class="fas fa-briefcase text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-white">Corporate Training</h3>
+          <p class="text-gray-400 mb-4">Customized workforce development programs tailored for enterprise teams.</p>
+          <a href="all_projects.html" class="text-red-500 font-semibold hover:underline hover:text-red-400 transition">View Options →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 lg:px-12 bg-black">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Our <span class="text-red-600">Work</span></h2>
+                <p class="text-gray-100 max-w-2xl mx-auto">A showcase of our successful projects across various industries</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="relative rounded-xl overflow-hidden card-hover">
+                    <img src="image.png" alt="E-commerce dashboard with sales analytics and product management interface" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <span class="text-sm font-medium bg-blue-600 px-2 py-1 rounded">Web Development</span>
+                        <h3 class="text-xl font-bold mt-2">Ayurvedic Website</h3>
+                        <p class="text-gray-200 text-sm">Complete online store solution with Ayurvedic medicins and there online appointment application's</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="relative rounded-xl overflow-hidden card-hover">
+                    <img src="ChatGPT Image Jul 20, 2025, 12_25_28 AM.png" alt="Mobile banking app interface with transaction history and budgeting features" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <span class="text-sm font-medium bg-green-600 px-2 py-1 rounded">Artificial Intelligence</span>
+                        <h3 class="text-xl font-bold mt-2">SupplyChainGPT – Internal Product by DataSpy</h3>
+                        <p class="text-gray-200 text-sm">Developed a decision intelligence platform that analyzes inventory, supplier performance,by Generative AI + RAG pipelines.
+</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="relative rounded-xl overflow-hidden card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c9233a9-f6b3-4403-b0d2-4c7fcc861c61.png" alt="Healthcare analytics dashboard with patient statistics and treatment metrics" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <span class="text-sm font-medium bg-purple-600 px-2 py-1 rounded">Data Analytics</span>
+                        <h3 class="text-xl font-bold mt-2">Icecream Sales Analytics</h3>
+                        <p class="text-gray-200 text-sm">Icecream Sales for differnt brands in swedan.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="all_projects.html" class="inline-block border-2 border-red-600 text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-red-600 hover:text-white transition">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 gradient-bg1 text-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">What Our <span class="text-red-400">Clients Say</span></h2>
+                <p class="max-w-2xl mx-auto opacity-90">Success stories from partners who've transformed their businesses with Dataspy</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                       
+                        <div>
+                            <h4 class="font-bold">Mr. Abhinav Patil</h4>
+                            <p class="text-sm opacity-80"> Operations Manager, Urban Threads Pvt. Ltd., Mumbai
+</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">“We hired DataSpy Technologies to develop a custom dashboard for our retail operations. Their team delivered a clean, interactive Power BI solution that gave us real-time visibility across inventory, sales, and customer insights.”
+</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                       
+                        <div>
+                            <h4 class="font-bold"> Dr. Anuja Deshpande</h4>
+                            <p class="text-sm opacity-80"> Event Head, Innovate India Hackathon, Nagpur</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">“Their team helped us host a cross-college hackathon on AI use cases. From idea generation to judging, everything was well-managed. Students loved the mentorship.”
+</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                       
+                        <div>
+                            <h4 class="font-bold">Dr. Gopal Khandagle</h4>
+                            <p class="text-sm opacity-80">ashayurveda clinic , Jalna</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">"Amazing work! The Ayurvedic website looks clean, professional, and truly reflects our brand. Great design, smooth experience, and timely delivery. Highly satisfied!"</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star-half-alt text-yellow-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 lg:px-12 bg-black">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">Get in <span class="text-red-600">Touch</span></h2>
+                    <p class="text-gray-100 mb-8 max-w-lg">Ready to transform your business? Connect with our expert team today to discuss your unique goals, project requirements, and unlock tailored, AI-powered digital solutions for accelerated growth.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Office</h4>
+                                <p class="text-gray-100">24 - Gajanann anex , makhmalabad road ,<br>panchavti , nashik - 422003 , Maharashtra , India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-100">dataspy.tech1@gmail.com<br></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-phone-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-100">+91 8805981687<br>Mon-Fri, 9am-5pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://www.linkedin.com/in/dataspy-technologies-517756375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 rounded-full bg-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                           
+                            <a href="https://www.instagram.com/dataspy.tech_?igsh=dWl1bnZtNDhvcjVy" class="w-10 h-10 rounded-full bg-gray-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+               <div class="lg:w-1/2 lg:pl-12">
+                
+                   <div class="mt-8">
+                       
+                       <form 
+    action="https://formsubmit.co/shindesaurav932@gmail.com" 
+    method="POST" 
+    class="bg-gray-800 p-8 rounded-2xl shadow-lg w-full max-w-md space-y-4"
+    id="contactForm"
+    onsubmit="clearFormAfterSubmit()"
+  >
+    <!-- Hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    
+
+    <h2 class="text-2xl font-bold text-center text-red-600">Contact Us</h2>
+
+    <input type="text" name="name" placeholder="Your Name" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2" />
+
+    <input type="email" name="email" placeholder="Your Email" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2" />
+
+    <input type="tel" name="phone" placeholder="Contact Number" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2" />
+
+    <select name="service" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2">
+      <option value="" disabled selected>Select a Service</option>
+       <option value="none">None</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Data Analysis">Data Analysis</option>
+      <option value="Digital Marketing">Digital Marketing</option>
+      <option value="Business Development">Business Development</option>
+      <option value="Graphic Design">Graphic Design</option>
+      <option value="AI Solutions">AI Solutions</option>
+    </select>
+
+    <select name="Programs" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2">
+      <option value="" disabled selected>Select a programs</option>
+       <option value="none">None</option>
+      <option value="training programs">Training Program</option>
+      <option value="Academic Consultancy">Academic Consultancy</option>
+      <option value="Digital Marketing">Corporate Training</option>
+
+    </select>
+    <textarea name="message" placeholder="Your Message" rows="4" required
+      class="w-full border text-black border-gray-300 rounded-lg px-4 py-2"></textarea>
+
+    <button type="submit"
+      class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
+      Send Message
+    </button>
+  </form>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+
+                    <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+  <li><a href="#about" class="text-gray-400 hover:text-white transition"></a></li>
+                        <li><a href="mailto:dataspy.tech1@gmail.com" class="text-gray-400 hover:text-white transition">dataspy.tech1@gmail.com</a></li>
+                    </ul>
+                </div>
+               <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="web_dev_service.html" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="data_Analysis.html" class="text-gray-400 hover:text-white transition">Data Analytics</a></li>
+                        <li><a href="digital_marketing.html" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+                        <li><a href="Business_analysis.html" class="text-gray-400 hover:text-white transition">Business Development</a></li>
+                         <li><a href="Artificial_intelligence.html" class="text-gray-400 hover:text-white transition">Artificial Intelligence</a></li>
+                          <li><a href="Graphic_design.html" class="text-gray-400 hover:text-white transition">Graphic Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 lg:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                     <div class="flex items-center mb-4">
+                        <img src="ei_1752053280162-removebg-preview (2).png" alt="Dataspy logo mark in white" class="h-50 w-60 full">            
+                    </div>
+                </div>
+            </div>
+            
+          <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center relative">
+  <p class="text-gray-400 mb-4 md:mb-0">© 2023 Dataspy. All rights reserved.</p>
+  <div class="flex space-x-6 relative">
+
+    <!-- Privacy Policy -->
+    <div class="relative group">
+      <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+      <div class="absolute bottom-8 border-2  right-0 w-100% bg-gray-900 text-sm text-gray-300 p-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-1000 transition-all duration-300 z-50 pointer-events-none">
+        <h3 class="text-white font-semibold mb-2">Privacy Policy</h3>
+    <p>We collect personal, academic, and usage data to provide training, internships, and consulting services. Your information is secure and never sold. Data may be shared with mentors or partners for learning and placement. You can access or request deletion of your data anytime. Cookies help enhance your experience.</p>
+      </div>
+    </div>
+
+    <!-- Terms of Service -->
+    <div class="relative group">
+      <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+      <div class="absolute border-2 bottom-8 right-0 w-60% bg-gray-900 text-sm text-gray-300 p-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-all duration-300 z-50 pointer-events-none">
+        <h3 class="text-white font-semibold mb-2">Terms of Service</h3>
+      <p>By using our services, you agree to provide accurate information and avoid misuse. Fees are non-refundable once a course begins. Certificates are earned upon successful completion. Content is DataSpy’s property. We may suspend accounts for violations. Legal jurisdiction lies in Pune, India. Support is available via email or website.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="fixed bottom-6 right-6 hidden">
+        <a href="#Home" class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition shadow-lg">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+
+
+     <script>
+    function clearFormAfterSubmit() {
+      // Wait briefly before clearing (after redirect starts)
+      setTimeout(() => {
+        document.getElementById("contactForm").reset();
+      }, 100); // slight delay to allow formsubmit to capture values
+    }
+  </script>
+      <script>
+        // Initialize particle.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('home', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ef4444" },
+                    shape: { type: "circle" },
+                    opacity: { random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
+                    size: { random: true, value: 3 },
+                    line_linked: { enable: true, distance: 150, color: "#ef4444", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" }
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if(name && email && message) {
+                alert(`Thanks for your message, ${name}! We'll get back to you soon.`);
+                contactForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Back to top button visibility
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(el => {
+                const elementPosition = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if(elementPosition < windowHeight - 100) {
+                    el.style.opacity = 1;
+                }
+            });
+        }
+        
+        // Initialize animations
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+ <!-- Floating WhatsApp Box -->
+  <div id="waBoxWrapper" class="fixed bottom-6 right-6 z-50 flex items-center transition-all duration-500 ease-in-out">
+    <!-- Main Box -->
+    <div id="waBox" class="max-w-xs w-80 p-4 rounded-xl bg-[#0b0f1a] text-white shadow-lg border border-red-500 transition-transform duration-500 ease-in-out transform translate-x-0">
+      <div class="flex items-start gap-4">
+        <div class="p-2 bg-red-600 rounded-full">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="whatsapp" class="w-6 h-6"/>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Connect on WhatsApp </h3>
+          <p class="text-sm text-gray-300">For Services Info and Live Programs query's</p>
+          <a href="https://wa.me/918805981687" target="_blank" class="inline-block mt-3 text-red-400 hover:underline">Ask Now →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow Toggle Button -->
+    <button id="waToggleBtn" onclick="toggleWaBox()" class="bg-red-500 text-white rounded-r-xl h-full px-2 flex items-center justify-center shadow-md transition-all duration-300">
+      <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    let isHidden = false;
+
+    function toggleWaBox() {
+      const box = document.getElementById('waBox');
+      const arrow = document.getElementById('arrowIcon');
+      
+
+      if (isHidden) {
+        box.classList.remove('translate-x-full');
+        arrow.classList.remove('rotate-360');
+      } else {
+        box.classList.add('translate-x-full');
+        arrow.classList.add('rotate-180');
+      }
+
+      isHidden = !isHidden;
+    }
+  </script>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
