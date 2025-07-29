@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.dataspytech.in/sitemap.xml
+Sitemap: https://dataspytech.in/sitemap.xml
