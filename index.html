@@ -209,33 +209,56 @@
 
 
  <!-- botAI -->
-
-    <div id="chatbot-container">
-  <div id="chat-header">Dataspy ChatBot</div>
-  <div id="chat-log"></div>
-  <div id="chat-input">
-    <input type="text" id="user-msg" placeholder="Ask anything..." />
-    <button onclick="sendMessage()">Send</button>
+<div id="chatbot-container" style="max-width: 500px; margin: auto; font-family: Arial, sans-serif;">
+  <div id="chat-header" style="background-color: #222; color: #fff; padding: 10px; text-align: center;">
+    Dataspy ChatBot
+  </div>
+  <div id="chat-log" style="border: 1px solid #ccc; height: 300px; overflow-y: auto; padding: 10px; background: #f9f9f9;"></div>
+  <div id="chat-input" style="display: flex; border: 1px solid #ccc; border-top: none;">
+    <input
+      type="text"
+      id="user-msg"
+      placeholder="Ask anything..."
+      style="flex: 1; padding: 10px; border: none;"
+      onkeypress="if(event.key === 'Enter') sendMessage()"
+    />
+    <button onclick="sendMessage()" style="padding: 10px 20px; background-color: #222; color: white; border: none;">Send</button>
   </div>
 </div>
 
 <script>
   async function sendMessage() {
-    const userMsg = document.getElementById("user-msg").value;
-    if (!userMsg.trim()) return;
-
+    const userMsgInput = document.getElementById("user-msg");
+    const userMsg = userMsgInput.value.trim();
     const log = document.getElementById("chat-log");
-    log.innerHTML += `<div><b>You:</b> ${userMsg}</div>`;
-    document.getElementById("user-msg").value = "";
 
-    const response = await fetch("https://www.dataspytech-bot.onrender.com/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: userMsg })
-    });
+    if (!userMsg) return;
 
-    const data = await response.json();
-    log.innerHTML += `<div><b>Bot:</b> ${data.reply}</div>`;
+    // Show user's message
+    log.innerHTML += `<div><strong>You:</strong> ${userMsg}</div>`;
+    userMsgInput.value = "";
+    log.scrollTop = log.scrollHeight;
+
+    try {
+      const response = await fetch("https://www.dataspytech-bot.onrender.com/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: userMsg })
+      });
+
+      if (!response.ok) {
+        throw new Error("Server error");
+      }
+
+      const data = await response.json();
+      log.innerHTML += `<div><strong>Bot:</strong> ${data.reply}</div>`;
+    } catch (error) {
+      console.error("Error:", error);
+      log.innerHTML += `<div><strong>Bot:</strong> Sorry, something went wrong. Try again later.</div>`;
+    }
+
     log.scrollTop = log.scrollHeight;
   }
 </script>
@@ -950,6 +973,7 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
 
 </body>
 </html>
+
 
 
 
