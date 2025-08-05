@@ -227,7 +227,7 @@
     log.innerHTML += `<div><b>You:</b> ${userMsg}</div>`;
     document.getElementById("user-msg").value = "";
 
-    const response = await fetch("https://your-backend-url.onrender.com/chat", {
+    const response = await fetch("https://www.dataspytech-bot.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userMsg })
@@ -949,6 +949,7 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
 
 </body>
 </html>
+
 
 
 
