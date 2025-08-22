@@ -3,42 +3,42 @@
   
   <!-- Home -->
   <url>
-    <loc>https://dataspytech.in/index.html</loc>
+    <loc>https://www.dataspytech.in/index.html</loc>
     <priority>1.0</priority>
   </url>
 
   <!-- Services -->
   <url>
-    <loc>https://dataspytech.in/SERVICES/Artificial_intelligence.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/Artificial_intelligence.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/SERVICES/Business_analysis.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/Business_analysis.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/SERVICES/data_Analysis.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/data_Analysis.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/SERVICES/digital_marketing.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/digital_marketing.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/SERVICES/Graphic_design.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/Graphic_design.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/SERVICES/web_dev_service.html</loc>
+    <loc>https://www.dataspytech.in/SERVICES/web_dev_service.html</loc>
   </url>
 
   <!-- Trainings -->
   <url>
-    <loc>https://dataspytech.in/TRAININGS/a-website-landing-page.html</loc>
+    <loc>https://www.dataspytech.in/TRAININGS/a-website-landing-page.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/TRAININGS/Acadamic_Consultant.html</loc>
+    <loc>https://www.dataspytech.in/TRAININGS/Acadamic_Consultant.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/TRAININGS/all_projects.html</loc>
+    <loc>https://www.dataspytech.in/TRAININGS/all_projects.html</loc>
   </url>
   <url>
-    <loc>https://dataspytech.in/TRAININGS/courses_we_offers.html</loc>
+    <loc>https://www.dataspytech.in/TRAININGS/courses_we_offers.html</loc>
   </url>
 
 </urlset>
