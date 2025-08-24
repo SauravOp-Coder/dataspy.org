@@ -156,14 +156,177 @@
     align-items: center;
 }
 
-    </style>
+    /* Floating button/card */
+    .floating-card {
+      position: fixed;
+      bottom: 100px; /* lifted above bottom */
+      right: 20px;
+      background: #fff;
+      border: 2px solid #d62828;
+      border-radius: 12px;
+      padding: 12px 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: cardSlideIn 0.7s ease forwards;
+    }
 
+    .floating-card h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .floating-card button {
+      background: #d62828;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .floating-card button:hover {
+      background: #b71c1c;
+    }
+
+    /* Popup overlay */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    /* Popup box */
+    .popup {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 320px;
+      max-width: 90%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: relative;
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #000;
+    }
+
+    .popup p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .popup a {
+      display: inline-block;
+      background: #d62828;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .popup a:hover {
+      background: #b71c1c;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #d62828;
+      cursor: pointer;
+    }
+
+    /* Animations */
+    @keyframes cardSlideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(100%) scale(0.95); opacity: 0; }
+      to { transform: translateX(0) scale(1); opacity: 1; }
+    }
+
+    @keyframes slideOutRight {
+      from { transform: translateX(0) scale(1); opacity: 1; }
+      to { transform: translateX(100%) scale(0.95); opacity: 0; }
+    }
+
+    .popup.animate-in {
+      animation: slideInRight 0.7s ease forwards;
+    }
+
+    .popup.animate-out {
+      animation: slideOutRight 0.6s ease forwards;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .floating-card {
+        right: 10px;
+        bottom: 80px;
+        padding: 10px 14px;
+      }
+      .popup {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
 
 
+ <!-- Floating Button/Card -->
+  <div class="floating-card" onclick="openPopup()">
+    <h3>Live </h3>
+    <P>AI Training Program</P>
+    <button>Read More</button>
+  </div>
 
+  <!-- Popup -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popupBox">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Live Program Details</h2>
+      <p>
+        Join our exclusive Live Program where you’ll learn about training the AI bots and About NLP.  
+        Don’t miss the opportunity!
+      </p>
+      <a href="https://chat.whatsapp.com/your-group-link" target="_blank">Join WhatsApp Group</a>
+    </div>
+  </div>
 
 
 
@@ -853,6 +1016,28 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
     </script>
 
  <!-- Floating WhatsApp Box -->
+ <script>
+    function openPopup() {
+      const overlay = document.getElementById("popupOverlay");
+      const popup = document.getElementById("popupBox");
+
+      overlay.classList.add("active");
+      popup.classList.remove("animate-out");
+      popup.classList.add("animate-in");
+    }
+
+    function closePopup() {
+      const overlay = document.getElementById("popupOverlay");
+      const popup = document.getElementById("popupBox");
+
+      popup.classList.remove("animate-in");
+      popup.classList.add("animate-out");
+
+      setTimeout(() => {
+        overlay.classList.remove("active");
+      }, 400);
+    }
+  </script>
 
 
   <!-- Toggle Script -->
@@ -884,6 +1069,7 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
     
 </body>
 </html>
+
 
 
 
