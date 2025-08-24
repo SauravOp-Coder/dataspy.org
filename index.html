@@ -292,16 +292,65 @@
     }
 
     /* Responsive */
-    @media (max-width: 480px) {
-      .floating-card {
-        right: 10px;
-        bottom: 80px;
-        padding: 10px 14px;
-      }
-      .popup {
-        width: 90%;
-      }
-    }
+   /* Responsive for mobile */
+@media (max-width: 480px) {
+  .floating-card {
+    right: 10px;
+    bottom: 70px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    width: 150px; /* keeps it neat */
+    text-align: center;
+  }
+
+  .floating-card h3 {
+    font-size: 12px;
+  }
+
+  .floating-card p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .floating-card button {
+    width: 100%;
+    padding: 8px;
+    font-size: 11px;
+    border-radius: 5px;
+  }
+
+  .popup {
+    width: 92%;
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .popup h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .popup p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .popup a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  .close-btn {
+    top: 6px;
+    right: 10px;
+    font-size: 18px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1069,6 +1118,7 @@ At DataSpy, we fuse creativity with cutting-edge AI tools to deliver stunning, i
     
 </body>
 </html>
+
 
 
 
