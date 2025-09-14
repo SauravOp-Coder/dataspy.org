@@ -131,7 +131,7 @@
 
     .hero-content {
       z-index: 1;
-      margin-top: 105px;
+      margin-top: 85px;
       max-width: 1100px;
         padding: 5px;
       padding: 0 20px;
@@ -157,12 +157,12 @@
     /* Paragraph */
     .hero p {
       font-family: 'Inter', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 400;
         padding: 5px;
-      line-height: 1.6;
+      line-height: 1.5;
       color: #e6e6e6;
-      max-width: 790px;
+      max-width: 750px;
       margin-bottom: 2rem;
       opacity: 0;
       transform: translateY(30px);
@@ -173,7 +173,7 @@
     /* Button */
     .hero .btn {
       display: inline-block;
-      padding: 0.8rem 1.8rem;
+      padding: 0.8rem 1.7rem;
       border: none;
       border-radius: 25px;
       background: #ff1744;
@@ -241,7 +241,13 @@ nav a {
 nav a:hover {
   color: #ff1744;
 }
-
+.buttons-home
+{
+  inset-inline-start: center;
+}
+.buttons-home a {
+  gap: 100px;
+}
 
     /* Animations */
     @keyframes fadeIn {
@@ -347,9 +353,13 @@ nav a:hover {
   <section class="hero" id="hero">
     <div class="hero-content">
       <h2>Spy Into The World Of Business With Artificial Intelligence</h2>
-      <p>We are a technology-driven company specializing in Web Development, AI, Data Analytics, and Business Growth Strategies. Our mission is to empower businesses with modern tools, insights, and training programs that fuel success.</p>
-        <a href="#services" class="btn hire-me" data-section-index="1">Get Started</a>
-        
+      <p>Dataspy Technologies is a forward-thinking Artificial Intelligence services company with deep expertise in Generative AI, Agentic AI, and Intelligent Data Solutions. We design and deploy cutting-edge AI systems that empower businesses to automate, innovate, and grow smarter. Alongside our services, we deliver immersive AI training programs that equip professionals and organizations with the skills to thrive in the AI era.</p>
+
+     <div class="buttons-home">
+
+     <a href="#services" class="btn hire-me" data-section-index="1">Services</a> 
+<a href="#programs" class="btn hire-me" data-section-index="1">Programs</a>
+        </div> 
     </div>
 
     <nav>
