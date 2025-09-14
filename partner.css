@@ -1,0 +1,113 @@
+
+  :root{
+    /* tweak these variables to customize */
+    --ds-bg: #1a1a1a;
+    --ds-card: #1a1a1a;
+    --ds-accent: #e33b2b;   /* dataspy red */
+    --ds-text: #eaeaea;
+    --ds-muted: #bdbdbd;
+
+    --logo-size: 90px;      /* outer circle diameter */
+    --logo-inner: 90px;     /* actual logo displayed size */
+    --gap: 28px;            /* gap between circular badges */
+    --speed: 18s;           /* full track scroll duration (lower = faster) */
+    --shadow: 0 12px 34px rgba(0,0,0,0.7);
+  }
+
+  /* Section base */
+  .ds-partners {
+    background: var(--ds-bg);
+    color: var(--ds-text);
+    padding: 48px 18px;
+    border-top: 2px solid rgba(227,59,43,0.06);
+    border-bottom: 2px solid rgba(227,59,43,0.06);
+  }
+  .ds-inner { max-width: 1200px; margin: 0 auto; }
+  .ds-section-title { text-align:center; font-size:1.35rem; margin:0 0 6px; }
+  .ds-sub { text-align:center; color:var(--ds-muted); margin:0 0 20px; }
+
+  /* Viewport: masked area for the track */
+  .partners-viewport {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 12px 0;
+  }
+
+  /* Track: horizontal flex container that scrolls continuously */
+  .partners-track {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    width: max-content; /* expands to contain duplicated items */
+    animation: partners-scroll var(--speed) linear infinite;
+    will-change: transform;
+    padding: 8px 0;
+  }
+
+  /* Individual partner circular badge */
+  .partner {
+    width: var(--logo-size);
+    height: var(--logo-size);
+    flex: 0 0 auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05));
+    display: grid;
+    place-items: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+  .partner:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.85);
+  }
+
+  /* Logos inside badge */
+  .partner img {
+    width: var(--logo-inner);
+    height: var(--logo-inner);
+    object-fit: contain;
+    display: block;
+    transition: filter 220ms ease, transform 220ms ease;
+  }
+  .partner:hover img {
+    filter: none;
+    transform: scale(1.04);
+  }
+
+  /* make animation feel seamless by translating by half of track width (duplicate sets) */
+  @keyframes partners-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50%)); }
+  }
+
+  /* Controls (optional small buttons) */
+  .partners-controls {
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:14px;
+  }
+  .partners-controls button{
+    background:transparent;
+    color:var(--ds-muted);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding:8px 10px;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .partners-controls button:hover{
+    color:var(--ds-text);
+    border-color: rgba(227,59,43,0.18);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 980px){
+    :root { --logo-size: 84px; --logo-inner: 56px; --gap:22px; --speed: 22s; }
+  }
+  @media (max-width: 640px){
+    :root { --logo-size: 64px; --logo-inner: 44px; --gap:16px; --speed: 24s; }
+    .ds-section-title { font-size:1.1rem; }
+    .partners-controls { display:none; } /* hide small controls on tiny screens */
+  }
