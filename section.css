@@ -39,7 +39,7 @@
       }
       .section {
         background: var(--bg-black900);
-        min-height: 100vh;
+        min-height:fit-content;
         display: block;
         opacity: 1;
         padding: 0 30px;
@@ -83,13 +83,13 @@
         margin: auto;
       }
       .section .container {
-        padding-top: 60px;
-        padding-bottom: 70px;
+        padding-top: 20px;
+        padding-bottom: 10px;
       }
       .section-title {
         flex: 0 0 100%;
         max-width: 100%;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
       }
       .section-title h2 {
         font-size: 40px;

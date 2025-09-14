@@ -2,7 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  min-height: 86vh;
+  min-height: fit-content;
+  padding-top: 50px;
+  padding-bottom: 50px;
     margin-top: -56px;
 }
 
