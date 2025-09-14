@@ -120,12 +120,17 @@
   .main-panel{
     max-width:fit-content;
     padding: 10px;
+    border-left: none;
+    border-top: 5px solid #ff2e2e;   
   }
    .course-item{
     max-width: 135px;
    }
    .course-item:hover{
       transform: translateY(-1px) scale(1.0);
-   
    }
+    .side-panel .card{
+        border-left: none;
+    border-top: 5px solid #ff2e2e;   
+    }
 }
