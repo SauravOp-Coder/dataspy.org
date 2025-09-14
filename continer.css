@@ -5,7 +5,7 @@
   display: flex;
   gap: 0px;
   width: 100%;
-  max-width: 100%;
+  max-width: fit-content;
   height: 400px;
 }
 
