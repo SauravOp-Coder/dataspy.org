@@ -1,0 +1,121 @@
+:root{
+  --rvw-bg:#0d0d0d;
+  --rvw-card:#1a1a1a;
+  --rvw-accent:#e63946;
+  --rvw-muted:#cccccc;
+  --rvw-glass: rgba(255,255,255,0.03);
+  --rvw-radius:14px;
+  --rvw-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  --rvw-max-width:1100px;
+  --rvw-gap:22px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+.rvw-wrap{min-height:fit-content;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+
+.rvw-carousel{
+  width:100%;max-width:var(--rvw-max-width);
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border-radius:18px;padding:22px;border:1px solid rgba(255,255,255,0.04);box-shadow:var(--rvw-shadow);
+}
+
+.rvw-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px}
+.rvw-header h2{font-size:20px;margin:0;letter-spacing:0.2px}
+.rvw-header p{margin:0;color:var(--rvw-muted);font-size:13px}
+.rvw-accent{color:var(--rvw-accent);margin-left:8px}
+
+.rvw-viewport{position:relative;overflow:hidden;border-radius:14px}
+.rvw-track{
+  display:flex;
+  gap:var(--rvw-gap);
+  padding:28px 20px;
+  transition:transform 540ms cubic-bezier(.22,.98,.38,1);
+  align-items:stretch;
+  will-change:transform;
+  justify-content:flex-start;
+}
+
+/* Fluid card width: desktop up to 600px, tablet up to 520px, mobile almost full width */
+.rvw-card{
+  flex:0 0 auto;
+  width: min(720px, 68%);           /* big desktop uses 68% of viewport up to 720px */
+  max-width:900px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.03));
+  border-radius:var(--rvw-radius);
+  padding:18px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  border:1px solid rgba(255,255,255,0.05);
+  margin:0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Avatar + content */
+.rvw-avatar{flex:0 0 68px;height:68px;border-radius:12px;overflow:hidden;display:grid;place-items:center;background:var(--rvw-glass);border:1px solid rgba(255,255,255,0.05)}
+.rvw-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+.rvw-content{flex:1}
+.rvw-meta{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.rvw-name{font-weight:700;color:#fff}
+.rvw-role{font-size:13px;color:var(--rvw-muted)}
+.rvw-rating{display:flex;align-items:center;gap:6px;color:#fff}
+
+.rvw-stars{display:flex;gap:4px}
+.rvw-star{width:18px;height:18px;display:inline-block}
+
+.rvw-review-text{margin-top:10px;color:#ffffff;line-height:1.45;font-size:15px}
+.rvw-post{margin-top:8px;font-size:13px;color:var(--rvw-muted)}
+
+.rvw-controls{display:flex;align-items:center;gap:12px;margin-top:14px}
+.rvw-btn{background:transparent;border:1px solid rgba(255,255,255,0.1);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600;color:var(--rvw-muted)}
+.rvw-btn:focus{outline:2px solid rgba(230,57,70,0.3)}
+
+.rvw-dots{display:flex;gap:8px;align-items:center}
+.rvw-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.06);cursor:pointer;border:none}
+.rvw-dot.active{background:var(--rvw-accent);box-shadow:0 4px 12px rgba(230,57,70,0.35)}
+
+.rvw-arrow{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:10px;padding:8px;display:grid;place-items:center;border:1px solid rgba(255,255,255,0.05);cursor:pointer;color:#fff}
+
+/* TABLET breakpoint */
+@media (max-width:1024px){
+  :root{ --rvw-gap:18px; }
+  .rvw-card{ width: min(560px, 78%); }
+  .rvw-avatar{flex-basis:64px;height:64px}
+  .rvw-review-text{font-size:15px}
+}
+
+/* SMALLER TABLET / LARGE MOBILE */
+@media (max-width:740px){
+  :root{ --rvw-gap:14px; }
+  .rvw-card{ width: min(460px, 86%); flex-direction:column; align-items:center; text-align:center; padding:18px; }
+  .rvw-avatar{width:76px;height:76px}
+  .rvw-meta{flex-direction:column;gap:8px;align-items:center}
+  .rvw-review-text{font-size:15px}
+  .rvw-track{padding:22px 14px;}
+  .rvw-controls{justify-content:center}
+}
+
+/* MOBILE — show exactly one card centered and take most of the width */
+@media (max-width:420px){
+  :root{ --rvw-gap:12px; }
+  .rvw-card{
+    width: calc(100% - 32px); /* full width minus safe side padding */
+    padding:16px;
+    border-radius:12px;
+  }
+  .rvw-avatar{width:64px;height:64px;border-radius:10px}
+  .rvw-review-text{font-size:14px;line-height:1.4}
+  .rvw-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .rvw-controls{gap:8px}
+  .rvw-arrow{padding:6px}
+  .rvw-btn{padding:6px 10px}
+}
+
+/* subtle entrance */
+.rvw-card[data-animate="in"]{animation:rvw-popIn 420ms cubic-bezier(.2,.9,.3,1)}
+@keyframes rvw-popIn{from{transform:translateY(8px) scale(.995);opacity:0}to{transform:none;opacity:1}}
+
+/* utility */
+.rvw-muted{color:var(--rvw-muted)}

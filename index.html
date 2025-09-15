@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="media-qury.css">
     <link rel="stylesheet" href="section.css">
     <link rel="stylesheet" href="partner.css">
+    <link rel="stylesheet" href="reviews.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   
+ 
 <!--SEO-->
   <link rel="canonical" href="https://www.dataspytech.in/" />
     <link rel="apple-touch-icon" href="ChatGPT Image Sep 1, 2025, 04_53_28 PM.png" />
@@ -555,67 +558,33 @@ nav a:hover {
             <h2>Reviews</h2>
           </div>
         </div>         
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-red-100 bg-opacity-10 rounded-xl p-8 backdrop-blur-sm reveal">
-                    <div class="flex items-center mb-6">
-                       
-                        <div>
-                            <h4 class="font-bold">Mr. Abhinav Patil</h4>
-                            <p class="text-sm opacity-80"> Operations Manager, Urban Threads Pvt. Ltd., Mumbai
-</p>
-                        </div>
-                    </div>
-                    <p class="mb-4 italic">“We hired DataSpy Technologies to develop a custom dashboard for our retail operations. Their team delivered a clean, interactive Power BI solution that gave us real-time visibility across inventory, sales, and customer insights.”
-</p>
-                    <div class="flex">
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="bg-red-100 bg-opacity-10 rounded-xl p-8 backdrop-blur-sm reveal">
-                    <div class="flex items-center mb-6">
-                       
-                        <div>
-                            <h4 class="font-bold"> Dr. Anuja Deshpande</h4>
-                            <p class="text-sm opacity-80"> Event Head, Innovate India Hackathon, Nagpur</p>
-                        </div>
-                    </div>
-                    <p class="mb-4 italic">“Their team helped us host a cross-college hackathon on AI use cases. From idea generation to judging, everything was well-managed. Students loved the mentorship.”
-</p>
-                    <div class="flex">
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="bg-red-100 bg-opacity-10 rounded-xl p-8 backdrop-blur-sm reveal">
-                    <div class="flex items-center mb-6">
-                       
-                        <div>
-                            <h4 class="font-bold">Dr. Gopal Khandagle</h4>
-                            <p class="text-sm opacity-80">ashayurveda clinic , Jalna</p>
-                        </div>
-                    </div>
-                    <p class="mb-4 italic">"Amazing work! The Ayurvedic website looks clean, professional, and truly reflects our brand. Great design, smooth experience, and timely delivery. Highly satisfied!"</p>
-                    <div class="flex">
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star-half-alt text-yellow-300"></i>
-                    </div>
-                </div>
-            </div>
+      <div class="rvw-wrap">
+    <section class="rvw-carousel" aria-label="Client reviews carousel">
+      <div class="rvw-header">
+        <div>
+          <h2>What people say</h2>
+          <p class="rvw-muted">Real reviews from clients &amp; students — updated regularly</p>
+        </div>
+        <div class="rvw-rating rvw-muted">Average <strong class="rvw-accent">4.7</strong> · <span>Based on 128 reviews</span></div>
+      </div>
+
+      <div class="rvw-viewport" id="rvw-viewport">
+        <div class="rvw-track" id="rvw-track" role="list">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+
+      <div class="rvw-controls">
+        <button class="rvw-arrow" id="rvw-prevBtn" aria-label="Previous review">‹</button>
+        <div class="rvw-dots" id="rvw-dots" role="tablist" aria-label="Review pages"></div>
+        <button class="rvw-arrow" id="rvw-nextBtn" aria-label="Next review">›</button>
+        <div style="flex:1"></div>
+        <button class="rvw-btn" id="rvw-pauseBtn" aria-pressed="false">Pause</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="rvw-script.js"></script>
         </div>
     </section>
 
@@ -646,16 +615,77 @@ nav a:hover {
     <div class="main-panel reveal" id="vv">
       <h2>Courses We Offer</h2>
       <div class="course-grid">
-        <div class="course-item"><i class="fa-brands fa-python"></i>Python Programming</div>
-        <div class="course-item"><i class="fa-solid fa-database"></i>Data Science</div>
-        <div class="course-item"><i class="fa-solid fa-robot"></i>Artificial Intelligence</div>
-        <div class="course-item"><i class="fa-solid fa-brain"></i>Machine Learning</div>
-        <div class="course-item"><i class="fa-solid fa-magic-wand-sparkles"></i>Generative AI</div>
-        <div class="course-item"><i class="fa-solid fa-terminal"></i>Prompt Engineering</div>
-        <div class="course-item"><i class="fa-solid fa-network-wired"></i>Agentic AI</div>
-        <div class="course-item"><i class="fa-solid fa-chart-line"></i>Data Analytics</div>
-        <div class="course-item"><i class="fa-solid fa-chart-pie"></i>Data Visualization</div>
-        <div class="course-item"><i class="fa-solid fa-cubes"></i>Data Structures & Algorithms</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-brands fa-python"></i>
+    <span>Python Programming</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-database"></i>
+    <span>Data Science</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-robot"></i>
+    <span>Artificial Intelligence</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-brain"></i>
+    <span>Machine Learning</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-magic-wand-sparkles"></i>
+    <span>Generative AI</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-terminal"></i>
+    <span>Prompt Engineering</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-network-wired"></i>
+    <span>Agentic AI</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-chart-line"></i>
+    <span>Data Analytics</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-chart-pie"></i>
+    <span>Data Visualization</span>
+  </a>
+</div>
+
+<div class="course-item">
+  <a href="https://chat.whatsapp.com/Ifu1QMjYP6xCo2GeBaQ7cJ" target="_blank">
+    <i class="fa-solid fa-cubes"></i>
+    <span>Data Structures & Algorithms</span>
+  </a>
+</div>
+
       </div>
     </div>
   </div>

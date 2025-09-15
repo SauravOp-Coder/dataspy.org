@@ -134,3 +134,20 @@
     border-top: 5px solid #ff2e2e;   
     }
 }
+     
+.course-item {
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s;
+}
+.course-item a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-item i {
+  font-size: 40px;
+  color: #e63946; /* faint red */
+}
+
