@@ -13,6 +13,7 @@
    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="media-qury.css">
     <link rel="stylesheet" href="section.css">
+ 
     <link rel="stylesheet" href="partner.css">
     <link rel="stylesheet" href="reviews.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -69,6 +70,134 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;500&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
+  <!--pop style below-->
+<style>
+  :root{
+  /* Theme - tweak these to match dataspytech.in exactly */
+  --accent: #ec1839;        /* primary brand color (cyan/teal) */
+  --surface: rgba(18,24,31,0.6); /* translucent box background */
+  --surface-border: rgba(255,255,255,0.06);
+  --text: #e6eef2;
+  --muted: rgba(230,238,242,0.78);
+  --backdrop: rgba(3,8,15,0.65);
+  --glass-blur: 8px;
+  --transition-fast: 220ms;
+  --transition-slow: 360ms;
+}
+
+/* Backdrop (full-screen dim + blur) */
+#popup-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--backdrop);
+  backdrop-filter: blur(6px) saturate(110%);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast) ease;
+}
+
+/* Hidden state: removed from interaction */
+.hidden { visibility: hidden; }
+
+/* When open, show the backdrop */
+#popup-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Popup box - translucent glass look */
+#popup-box {
+  width: min(540px, 92%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 12px 40px rgba(2,6,12,0.6), 0 2px 6px rgba(0,0,0,0.3);
+  padding: 22px 22px 18px;
+  color: var(--text);
+  text-align: center;
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+  transition:
+    transform var(--transition-slow) cubic-bezier(.2,.9,.3,1),
+    opacity var(--transition-fast) ease;
+  position: relative;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  pointer-events: auto;
+}
+
+/* When popup is open, bring it to final state */
+#popup-backdrop.open #popup-box {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Close button (large, tappable, clear) */
+#popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background var(--transition-fast) ease, transform var(--transition-fast) ease;
+}
+#popup-close:hover { background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+#popup-close:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Heading + text */
+#popup-box h2 {
+  margin: 6px 0 8px;
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+#popup-box p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* Primary CTA (Google Form) */
+.popup-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 82%, #0b2f42));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(8,166,200,0.12);
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
+}
+.popup-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(8,166,200,0.16); }
+
+/* Small responsive tweaks */
+@media (max-width:420px){
+  #popup-box { padding: 16px; border-radius: 10px; }
+  #popup-box h2 { font-size: 18px; }
+  #popup-close { top: 8px; right: 10px; width: 36px; height: 36px; }
+}
+
+/* Prevent body scroll when popup open */
+body.popup-open { overflow: hidden; touch-action: none; }
+
+</style>
+<!--home style below-->
   <style>
     /* Reset */
     * {
@@ -1119,7 +1248,110 @@ nav a:hover {
 
   reveals.forEach(el => observer.observe(el));
 </script>
+
+
+<!--POP up html -->
+<!-- Popup -->
+ 
+<div id="popup-backdrop" class="hidden">
+  <div id="popup-box">
+    <button id="popup-close">&times;</button>
+    <h2>LIVE PROGRAM</h2>
+    <p>
+      Practical training for developers and beginners: hands-on courses, academic consultancy,
+      real-project practice and placement support. Short batches and certificates.
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTOf8__NzJmLR7j-UpkXSJunXmxJeiYwjmp-BtZ09MocwWkw/viewform" 
+       target="_blank" class="popup-btn">Apply / More Info</a>
+  </div>
 </div>
+<!--content div end below very imp-->
+</div>
+<!--POP UP-->
+ 
+<script>
+  (function () {
+  // IDs must match your HTML
+  const BACKDROP_ID = "popup-backdrop";
+  const BOX_ID = "popup-box";
+  const CLOSE_ID = "popup-close";
+
+  const backdrop = document.getElementById(BACKDROP_ID);
+  const box = document.getElementById(BOX_ID);
+  const closeBtn = document.getElementById(CLOSE_ID);
+  if (!backdrop || !box || !closeBtn) {
+    console.warn("Popup: missing required element. Check your HTML IDs.");
+    return;
+  }
+
+  // Keep track to return focus to last element
+  let lastActiveElement = null;
+
+  function openPopup() {
+    lastActiveElement = document.activeElement;
+    backdrop.classList.add("open");
+    backdrop.classList.remove("hidden");
+    document.body.classList.add("popup-open");
+    backdrop.setAttribute("aria-hidden", "false");
+    // move focus into popup for keyboard users
+    closeBtn.focus();
+  }
+
+  function closePopup() {
+    // play close transition by removing .open, keep backdrop visible until transition finishes
+    backdrop.classList.remove("open");
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("popup-open");
+
+    // after transition (match CSS transition duration) hide completely
+    const TRANSITION_DELAY = 380; // ms - slightly longer than CSS to be safe
+    setTimeout(() => {
+      // Only hide if still not open (avoid race)
+      if (!backdrop.classList.contains("open")) {
+        backdrop.classList.add("hidden");
+      }
+    }, TRANSITION_DELAY);
+
+    // return focus
+    if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+      lastActiveElement.focus();
+    }
+  }
+
+  // Reliable event bindings
+  closeBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    closePopup();
+  });
+
+  // Click on backdrop area (but not inside popup) closes
+  backdrop.addEventListener("click", function (e) {
+    if (e.target === backdrop) {
+      closePopup();
+    }
+  });
+
+  // Escape to close
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && backdrop.classList.contains("open")) {
+      closePopup();
+    }
+  });
+
+  // Show on load with small entrance delay
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    // small delay so it feels smooth
+    setTimeout(openPopup, 420);
+  } else {
+    window.addEventListener("DOMContentLoaded", () => setTimeout(openPopup, 420));
+  }
+
+  // Expose for debugging/test
+  window.dataspyPopup = { open: openPopup, close: closePopup };
+})();
+
+</script>
+
 </body>
 </html>
 
