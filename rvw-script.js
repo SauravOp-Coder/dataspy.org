@@ -2,14 +2,14 @@
 // same rvw- prefix to avoid conflicts
 
 const rvwReviews = [
-  {name:'Ananya R.', role:'Product Manager', avatar:'logos/logo2.jpg', rating:5, post:'Verified buyer', review:"Excellent course! The explanations are crisp and project-based — I built something useful in weeks."},
-  {name:'Rohit S.', role:'Student', avatar:'logos/smiling-young-man-illustration_1308-174669.jpg', rating:4, post:'Course participant', review:"Great teacher, code samples were very helpful. Would love an extra Q&A session."},
-  {name:'Meera K.', role:'Manager', avatar:'logos/logo13s.jpg', rating:5, post:'Client', review:"We engaged for product UI work. Delivered on time with a professional touch. Highly recommend."},
-  {name:'Vikram P.', role:'Developer', avatar:'logos/logo8.jpg', rating:4, post:'Bootcamp attendee', review:"Solid content and clean code patterns. Some topics were fast but overall great."},
-  {name:'Sana L.', role:'UI Designer', avatar:'logos/logo11hd.jpg', rating:5, post:'Workshop attendee', review:"The workshop gave actionable UI patterns I could use immediately. Clean delivery."},
-  {name:'Arjun M.', role:'Freelancer', avatar:'logos/logo7.jpg', rating:4, post:'Client', review:"Good communication and timely delivery. Some minor polish requested, but overall satisfied."},
-  {name:'Priya D.', role:'Marketing Lead', avatar:'logos/logo9.jpg', rating:5, post:'Corporate training', review:"Our team improved drastically after the training. Clear structure and practical examples."},
-  {name:'Kabir N.', role:'Student', avatar:'logos/smiling-young-man-illustration_1308-174669.jpg', rating:4, post:'Course participant', review:"Content is excellent; a few advanced topics could use more depth but great value."}
+  {name:'Ananya R.', role:'Product Manager', avatar:'logos/logo2.webp', rating:5, post:'Verified buyer', review:"Excellent course! The explanations are crisp and project-based — I built something useful in weeks."},
+  {name:'Rohit S.', role:'Student', avatar:'logos/smiling-young-man-illustration_1308-174669.webp', rating:4, post:'Course participant', review:"Great teacher, code samples were very helpful. Would love an extra Q&A session."},
+  {name:'Meera K.', role:'Manager', avatar:'logos/logo13s.webp', rating:5, post:'Client', review:"We engaged for product UI work. Delivered on time with a professional touch. Highly recommend."},
+  {name:'Vikram P.', role:'Developer', avatar:'logos/logo8.webp', rating:4, post:'Bootcamp attendee', review:"Solid content and clean code patterns. Some topics were fast but overall great."},
+  {name:'Sana L.', role:'UI Designer', avatar:'logos/logo11hd.webp', rating:5, post:'Workshop attendee', review:"The workshop gave actionable UI patterns I could use immediately. Clean delivery."},
+  {name:'Arjun M.', role:'Freelancer', avatar:'logos/logo7.webp', rating:4, post:'Client', review:"Good communication and timely delivery. Some minor polish requested, but overall satisfied."},
+  {name:'Priya D.', role:'Marketing Lead', avatar:'logos/logo9.webp', rating:5, post:'Corporate training', review:"Our team improved drastically after the training. Clear structure and practical examples."},
+  {name:'Kabir N.', role:'Student', avatar:'logos/smiling-young-man-illustration_1308-174669.webp', rating:4, post:'Course participant', review:"Content is excellent; a few advanced topics could use more depth but great value."}
 ];
 
 const rvwTrack = document.getElementById('rvw-track');
